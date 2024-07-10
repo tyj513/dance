@@ -137,7 +137,7 @@ def convert_to_wav(clip):
 
 def find_sound_offset(ref_wav, comparison_wav):
     start_position = 0
-    command = f"C:\\Praat.exe --run crosscorrelate.praat {ref_wav} {comparison_wav} {start_position} {SEARCH_INTERVAL}"
+    command = f"Praat.exe --run crosscorrelate.praat {ref_wav} {comparison_wav} {start_position} {SEARCH_INTERVAL}"
     
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     
